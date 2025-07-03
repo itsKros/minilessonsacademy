@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Custom CSS Variables */
+:root {
+  --light-purple: #9B0FF1;
+  --dark-purple: #59098B;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Background Colors */
+.bg-lightPurple         { background-color: var(--light-purple) !important; }
+.bg-darkPurple          { background-color: var(--dark-purple) !important; }
+.hover\\:bg-lightPurple:hover { background-color: var(--light-purple) !important; }
+.hover\\:bg-darkPurple:hover  { background-color: var(--dark-purple) !important; }
+
+/* Text Colors */
+.text-lightPurple       { color: var(--light-purple) !important; }
+.text-darkPurple        { color: var(--dark-purple) !important; }
+.hover\\:text-lightPurple:hover { color: var(--light-purple) !important; }
+.hover\\:text-darkPurple:hover  { color: var(--dark-purple) !important; }
+
+/* Border Colors */
+.border-lightPurple     { border-color: var(--light-purple) !important; }
+.border-darkPurple      { border-color: var(--dark-purple) !important; }
+
+/* Ring Colors */
+.ring-lightPurple       { --tw-ring-color: var(--light-purple) !important; }
+.ring-darkPurple        { --tw-ring-color: var(--dark-purple) !important; }
+
+/* Outline Colors */
+.outline-lightPurple    { outline-color: var(--light-purple) !important; }
+.outline-darkPurple     { outline-color: var(--dark-purple) !important; }
+
+/* Text Decoration (Underline) */
+.decoration-lightPurple { text-decoration-color: var(--light-purple) !important; }
+.decoration-darkPurple  { text-decoration-color: var(--dark-purple) !important; }
+
+/* Shadows */
+.shadow-lightPurple {
+  box-shadow: 0 4px 6px -1px var(--light-purple), 0 2px 4px -2px var(--light-purple) !important;
+}
+.shadow-darkPurple {
+  box-shadow: 0 4px 6px -1px var(--dark-purple), 0 2px 4px -2px var(--dark-purple) !important;
+}
