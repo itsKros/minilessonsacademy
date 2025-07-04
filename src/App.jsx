@@ -1,4 +1,4 @@
-import React from 'react';
+ import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import Home from './components/pages/Home/Home.jsx';
@@ -25,11 +25,16 @@ import Educators from './components/pages/Who/Educators.jsx';
 import Authors from './components/pages/Who/Authors.jsx';
 import Coaches from './components/pages/Who/Coaches.jsx';
 import ContentCreators from './components/pages/Who/ContentCreators.jsx';
+import RightSideBar from './components/RightSideBar/RightSideBar.jsx';
 
 export default function App() {
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
+
+    <Routes>        
+        <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="how-it-works" element={<HowItWorks />} />
         <Route path="faq" element={<FAQ />} />
