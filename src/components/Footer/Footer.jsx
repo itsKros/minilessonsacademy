@@ -3,53 +3,55 @@ import { Link } from 'react-router';
 
 export default function Footer() {
   return (
-    <footer class="text-gray-600  body-font">
-      <div class="container max-w-7xl py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div class="grid grid-cols-4 gap-4 w-full md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+    <footer class="text-gray-600 bg-darkPurple  body-font">
+      <div class="container max-w-7xl py-15 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div class="grid grid-cols-4 gap-4 w-full -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div class="w-full px-4">
-            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Partners</h2>
+            <h2 class="title-font text-[22px] leading-[22px] font-bold text-white tracking-widest mb-3">Partners</h2>
             <nav class="list-none mb-10">
-              <li><Link to={''} class="text-gray-600 hover:text-gray-800">Signup</Link></li>
+              <li><Link to={''} class="text-[19px] leading-[19px] font-normal text-white hover:text-[#CCAA00]">Signup</Link></li>
             </nav>
           </div>
           <div class="w-full px-4">
-            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Company</h2>
-            <nav class="list-none mb-10">
-              <li><Link to={''} class="text-gray-600 hover:text-gray-800">About </Link></li>
-              <li><Link to={''} class="text-gray-600 hover:text-gray-800">Case Studies </Link></li>
-              <li><Link to={''} class="text-gray-600 hover:text-gray-800">Contact Us </Link></li>
-              <li><Link to={''} class="text-gray-600 hover:text-gray-800">Pricing</Link></li>
+            <h2 class="title-font text-[22px] leading-[22px] font-bold text-white tracking-widest mb-3">Company</h2>
+            <nav class="list-none mb-10 space-y-2">
+              <li><Link to={''} class="text-[19px] leading-[19px] font-normal text-white hover:text-[#CCAA00]"> About </Link></li>
+              <li><Link to={''} class="text-[19px] leading-[19px] font-normal text-white hover:text-[#CCAA00]"> Case Studies </Link></li>
+              <li><Link to={''} class="text-[19px] leading-[19px] font-normal text-white hover:text-[#CCAA00]"> Contact Us </Link></li>
+              <li><Link to={''} class="text-[19px] leading-[19px] font-normal text-white hover:text-[#CCAA00]">Pricing</Link></li>
             </nav>
           </div>
           <div class="w-full px-4">
-            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Resources</h2>
-            <nav class="list-none mb-10">
-              <li><Link to={''} class="text-gray-600 hover:text-gray-800">Login  </Link></li>
-              <li><Link to={''} class="text-gray-600 hover:text-gray-800">Refund Policy</Link></li>
-              <li><Link to={''} class="text-gray-600 hover:text-gray-800"> FAQ</Link></li>
+            <h2 class="title-font text-[22px] leading-[22px] font-bold text-white tracking-widest mb-3">Resources</h2>
+            <nav class="list-none mb-10 space-y-2">
+              <li><Link to={''} class="text-[19px] leading-[19px] font-normal text-white hover:text-[#CCAA00]">Login  </Link></li>
+              <li><Link to={''} class="text-[19px] leading-[19px] font-normal text-white hover:text-[#CCAA00]">Refund Policy</Link></li>
+              <li><Link to={''} class="text-[19px] leading-[19px] font-normal text-white hover:text-[#CCAA00]"> FAQ</Link></li>
             </nav>
           </div>
           <div class="w-full px-4">
-            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Legal</h2>
-            <nav class="list-none mb-10">
-              <li><Link to={''} class="text-gray-600 hover:text-gray-800">Privacy Policy</Link></li>
-              <li><Link to={''} class="text-gray-600 hover:text-gray-800">Terms of Service</Link></li>
-              <li><Link to={''} class="text-gray-600 hover:text-gray-800">Income Disclaimer</Link></li>
+            <h2 class="title-font text-[22px] leading-[22px] font-bold text-white tracking-widest mb-3">Legal</h2>
+            <nav class="list-none mb-10 space-y-2">
+              <li><Link to={''} class="text-[19px] leading-[19px] font-normal text-white hover:text-[#CCAA00]">Privacy Policy</Link></li>
+              <li><Link to={''} class="text-[19px] leading-[19px] font-normal text-white hover:text-[#CCAA00]">Terms of Service</Link></li>
+              <li><Link to={''} class="text-[19px] leading-[19px] font-normal text-white hover:text-[#CCAA00]">Income Disclaimer</Link></li>
             </nav>
           </div>
         </div>
-        <div class="w-40 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span class="ml-3 text-xl">Tailblocks</span>
-          </a>
-          <p class="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
+        <div class="w-70 flex-shrink-0 md:mx-0 mx-auto text-right">
+          <p class="mb-2 text-[13px] leading-[22px] font-bold text-white/75">© 2025 MLA. All Rights Reserved.</p>
+          <p class="mb-2 text-[13px] leading-[22px] font-bold text-white/75 text-right">1375 Leeser Avenue Akron, Ohio 44314</p>
+          <span class="inline-flex gap-3 text-[20px] lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
+            <Link to={''} class="px-3.5 py-2 rounded text-white bg-[#3b5997]"><i class="fa-brands fa-facebook-f"></i></Link>
+            <Link to={''} class="px-3 py-2 rounded text-white bg-[#262626]"><i class="fa-brands fa-instagram"></i></Link>
+            <Link to={''} class="px-3 py-2 rounded text-white bg-[#000000]"><i class="fa-brands fa-x-twitter"></i></Link>
+            <Link to={''} class="px-3 py-2 rounded text-white bg-[#650aaa]"><i class="fa-brands fa-tiktok"></i></Link>
+            <Link to={''} class="px-3 py-2 rounded text-white bg-[#cd201f]"><i class="fa-brands fa-youtube"></i></Link>
+          </span>
         </div>
 
       </div>
-      <div class="bg-gray-100">
+      {/* <div class="bg-gray-100">
         <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
             <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@knyttneve</a>
@@ -79,7 +81,7 @@ export default function Footer() {
             </a>
           </span>
         </div>
-      </div> 
+      </div>  */}
     </footer>
     // <footer className="bg-darkPurple text-white p-4 text-center">
     //   <p>&copy; {new Date().getFullYear()} MiniLessons Academy</p>
