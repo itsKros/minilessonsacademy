@@ -42,11 +42,11 @@ export default function Footer() {
           <p class="mb-2 text-[13px] leading-[22px] font-bold text-white/75">© 2025 MLA. All Rights Reserved.</p>
           <p class="mb-2 text-[13px] leading-[22px] font-bold text-white/75 text-right">1375 Leeser Avenue Akron, Ohio 44314</p>
           <span class="inline-flex gap-3 text-[20px] lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
-            <Link to={''} class="px-3.5 py-2 rounded text-white bg-[#3b5997]"><i class="fa-brands fa-facebook-f"></i></Link>
-            <Link to={''} class="px-3 py-2 rounded text-white bg-[#262626]"><i class="fa-brands fa-instagram"></i></Link>
-            <Link to={''} class="px-3 py-2 rounded text-white bg-[#000000]"><i class="fa-brands fa-x-twitter"></i></Link>
-            <Link to={''} class="px-3 py-2 rounded text-white bg-[#650aaa]"><i class="fa-brands fa-tiktok"></i></Link>
-            <Link to={''} class="px-3 py-2 rounded text-white bg-[#cd201f]"><i class="fa-brands fa-youtube"></i></Link>
+            <Link to={''} class="px-3.5 py-2 rounded text-white bg-[#3b5997] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-facebook-f"></i></Link>
+            <Link to={''} class="px-3 py-2 rounded text-white bg-[#262626] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-instagram"></i></Link>
+            <Link to={''} class="px-3 py-2 rounded text-white bg-[#000000] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-x-twitter"></i></Link>
+            <Link to={''} class="px-3 py-2 rounded text-white bg-[#650aaa] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-tiktok"></i></Link>
+            <Link to={''} class="px-3 py-2 rounded text-white bg-[#cd201f] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-youtube"></i></Link>
           </span>
         </div>
 
