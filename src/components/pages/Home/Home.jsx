@@ -45,8 +45,35 @@ const accordionData = [
 ];
 // Accordion Close
 
-// Testimonial Open
-const testimonials = [
+// Testimonial One Open
+const testimonialsOne = [
+  {
+    name: "Lily",
+    role: "Wellness Author & Mom",
+    img: "/assets/home/user-2.png",
+    title: "I finally published what I’ve been thinking about for years.",
+    text: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90's microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland."
+  },
+  {
+    name: "Lily",
+    role: "Wellness Author & Mom",
+    img: "/assets/home/user-2.png",
+    title: "I finally published what I’ve been thinking about for years.",
+    text: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90's microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland."
+  },
+  {
+    name: "Lily",
+    role: "Wellness Author & Mom",
+    img: "/assets/home/user-2.png",
+    title: "I finally published what I’ve been thinking about for years.",
+    text: "Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90's microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland."
+  },
+
+];
+// Testimonial One Close
+
+// Testimonial Two Open
+const testimonialsTwo = [
   {
     name: "Rachel M",
     role: "Health Coach",
@@ -133,19 +160,64 @@ const testimonials = [
   }
 ];
 
-const settings = {
+const NextArrow = ({ className, style, onClick }) => (
+  <div
+    className={`custom-next absolute top-1/2 right-[-20px] transform -translate-y-1/2 z-10 cursor-pointer ${className}`}
+    style={{ ...style, display: "block" }}
+    onClick={onClick}
+  >
+    <i className="fa-solid fa-chevron-right text-[20px] text-black hover:text-[#DA0000]"></i>
+  </div>
+);
+
+const PrevArrow = ({ className, style, onClick }) => (
+  <div
+    className={`custom-prev absolute top-1/2 left-[-20px] transform -translate-y-1/2 z-10 cursor-pointer ${className}`}
+    style={{ ...style, display: "block" }}
+    onClick={onClick}
+  >
+    <i className="fa-solid fa-chevron-left text-[20px] text-black hover:text-[#DA0000]"></i>
+  </div>
+);
+
+const settingsOne = {
+  dots: false,
+  arrows: true,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 0,
+  speed: 10000,
+  cssEase: "linear",
+  pauseOnHover: false,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  swipe: false,
+  draggable: false,
+  nextArrow: <NextArrow />,  // ✅ custom class attached here
+  prevArrow: <PrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+}; 
+
+const settingsTwo = {
   dots: false,
   arrows: false,
   infinite: true,
   autoplay: true,
-  autoplaySpeed: 0, // continuous effect
-  speed: 10000, // slower speed for smooth scroll
+  autoplaySpeed: 0,
+  speed: 10000,
   cssEase: 'linear',
   pauseOnHover: false,
-  slidesToShow: 5,
+  slidesToShow: 5, // ✅ DESKTOP: 5
   slidesToScroll: 1,
-  swipe: false, // disable swipe
-  draggable: false, // disable drag
+  swipe: false,
+  draggable: false,
   responsive: [
     {
       breakpoint: 1024,
@@ -189,12 +261,12 @@ export default function Home() {
   return (
     <>
       {/* Sectione 1 Create Studio Quality Courses  */}
-      <section className="pt-30 bg-[linear-gradient(180deg,_#FFF8E8_14.62%,_#FBF1F3_50%,_#FFFFFF_100%)]">
-        <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-10">
+      <section className="pt-20 bg-[linear-gradient(180deg,_#FFF8E8_14.62%,_#FBF1F3_50%,_#FFFFFF_100%)]">
+        <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-5">
           <h1 className="font-medium text-black text-[22px] leading-[29px] uppercase">FOR EDUCATORS, COACHES & BUSINESS OWNERS</h1>
-          <h2 className="w-[900px] font-bold text-[60px] leading-[78px] text-transparent bg-clip-text bg-[linear-gradient(180deg,_#9B0FF1_0%,_#4A0773_100%)]">Create Studio Quality Courses & E-Books in 90 Seconds</h2>
+          <h2 className="max-w-[900px] font-bold text-[40px] leading-[45px] sm:text-[60px] sm:leading-[78px] text-transparent bg-clip-text bg-[linear-gradient(180deg,_#9B0FF1_0%,_#4A0773_100%)]">Create Studio Quality Courses & E-Books in 90 Seconds</h2>
           <h3 className="font-bold text-[36px] leading-[47px] text-[#4D4D4D]">✨ (Without Writing a Single Word) ✨</h3>
-          <h3 className="w-[700px] font-medium text-black text-[22px] leading-[29px]"> Mini Lessons Academy transforms your raw expertise into polished, <b>ready-to-sell digital products in minutes.</b> </h3>
+          <h3 className="max-w-[700px] font-medium text-black text-[22px] leading-[29px]"> Mini Lessons Academy transforms your raw expertise into polished, <b>ready-to-sell digital products in minutes.</b> </h3>
           <nav className="list-none mb-10 text-center font-medium text-black text-[22px] leading-[29px] space-y-2">
             <li>No tech skills.</li>
             <li>No design talent.</li>
@@ -205,20 +277,20 @@ export default function Home() {
 
       {/* Sectione 2 3Day Free Trail  */}
       <section className="py-10">
-        <div className="max-w-7xl max-w-[1000px] mx-auto px-4 sm:px-6 mb-20 lg:px-8 flex flex-row flex-wrap gap-10">
-          <div class="grid grid-cols-3 gap-8">
-          <div className="p-5 flex flex-col items-start gap-4 rounded-lg border border-[#9AE6BF] h-full w-full bg-[#f4fffa] justify-start overflow-y-auto">
+        <div className="max-w-7xl max-w-[1060px] mx-auto px-4 sm:px-6 mb-20 lg:px-8 flex flex-row flex-wrap gap-7">
+          <div class="grid grid-cols-3 gap-5">
+            <div className="p-5 flex flex-col items-start gap-4 rounded-lg border border-[#F1F1F1] h-full w-full bg-[#FFFFFF] justify-start overflow-y-auto">
               <img alt="content" className="w-12 h-12" src="/assets/home/icon-1.webp" />
-              <p class="text-black text-lg title-font font-medium">Generate complete courses, e-books, and lead magnets with AI that actually sounds like you</p>
+              <p class="font-medium text-black text-[20px] leading-[26px]">Generate complete courses, e-books, and lead magnets with AI that actually sounds like you</p>
+            </div>
+            <div className="p-5 flex flex-col items-start gap-4 rounded-lg border border-[#FFE5AD] h-full w-full bg-[#fffbf3] justify-start overflow-y-auto">
+              <img alt="content" className="w-12 h-12" src="/assets/home/icon-2.webp" />
+              <p class="font-medium text-black text-[20px] leading-[26px]">Edit every word or publish as-is — you're always in complete control</p>
             </div>
             <div className="p-5 flex flex-col items-start gap-4 rounded-lg border border-[#9AE6BF] h-full w-full bg-[#f4fffa] justify-start overflow-y-auto">
-              <img alt="content" className="w-12 h-12" src="/assets/home/icon-2.webp" />
-              <p class="text-black text-lg title-font font-medium">Edit every word or publish as-is — you're always in complete control</p>
-            </div>
-           <div className="p-5 flex flex-col items-start gap-4 rounded-lg border border-[#9AE6BF] h-full w-full bg-[#f4fffa] justify-start overflow-y-auto">
 
               <img alt="content" className="w-12 h-12" src="/assets/home/icon-3.webp" />
-              <p class="text-black text-lg title-font font-medium">Instantly host online or export beautiful files ready to sell</p>
+              <p class="font-medium text-black text-[20px] leading-[26px]">Instantly host online or export beautiful files ready to sell</p>
             </div>
           </div>
         </div>
@@ -232,8 +304,8 @@ export default function Home() {
           />
 
           {/* Start Trial Button */}
-          <button className="max-w-[791px] w-full mx-auto flex justify-center items-center font-medium text-white text-[35px] leading-[40px] py-6 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
-            Start Trial
+          <button className="max-w-[791px] w-full mx-auto flex justify-center items-center font-medium text-white text-[35px] leading-[40px] py-4 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
+            Start Free Trial
           </button>
 
 
@@ -432,8 +504,8 @@ export default function Home() {
 
             </div>
             <div class="w-full relative p-7 pb-0 border border-[#ECECEC] shadow-[0_0_30px_4px_rgb(191,191,191,0.25)] rounded-lg p-5">
-              <h3 class="font-bold text-[30px] leading-[39px] text-[#DA0000] text-center mb-2">The Better Way</h3>
-              <div class="space-y-4 mr-[-50px]">
+              <h3 className="font-bold text-[30px] mt-[-10px] leading-[39px] text-[#FFF] text-center mb-2 bg-[url('/assets/home/blue-background.png')] bg-[length:80%] bg-no-repeat bg-center bg-content p-1"> The Better Way </h3>
+              <div class="space-y-4 mr-[-50px] mt-5">
                 <p class="font-bold text-black text-[20px] leading-[26px]">✅ 90-second course creation</p>
                 <p class="font-bold text-black text-[20px] leading-[26px]">✅ Built-in knowledge frameworks</p>
                 <p class="font-bold text-black text-[20px] leading-[26px]">✅ All-in-one platform</p>
@@ -441,12 +513,12 @@ export default function Home() {
                 <p class="font-bold text-black text-[20px] leading-[26px]">✅ Tech-free publishing</p>
               </div>
 
-              <img alt="content" class="absolute inset-x-0 bottom-0 mx-auto w-auto h-auto w-full" src="/assets/home/home-5.png" />
+              <img alt="content" class="absolute inset-x-0 bottom-0 mx-auto h-auto w-[85%]" src="/assets/home/home-5.png" />
             </div>
 
           </div>
-          <button className="max-w-[400px] mx-auto w-full flex justify-center items-center font-bold text-white text-[35px] leading-[40px] py-6 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
-            Start Trial
+          <button className="max-w-[400px] mx-auto w-full flex justify-center items-center font-bold text-white text-[35px] leading-[40px] py-4 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
+            Start Free Trial
           </button>
         </div>
       </section>
@@ -458,7 +530,7 @@ export default function Home() {
           </h2>
 
           {/* Step 1 */}
-          <div className="w-full max-w-[930px] mx-auto flex gap-0">
+          <div className="w-full max-w-[930px] mx-auto flex gap-0 items-center">
             {/* Left Image Block */}
             <div className="w-full lg:w-1/2  p-4">
               <span className="block w-full h-[370px] bg-center bg-cover rounded-[25px]" style={{ backgroundImage: "url('/assets/home/home-5.jpg')" }} ></span>
@@ -481,7 +553,7 @@ export default function Home() {
           </div>
 
           {/* Step 2 */}
-          <div className="w-full max-w-[930px] mx-auto flex gap-0">
+          <div className="w-full max-w-[930px] mx-auto flex gap-0 items-center">
             {/* Left Image Block */}
             <div className="w-full lg:w-2/3 p-4">
               {/* CTA 1 */}
@@ -506,7 +578,7 @@ export default function Home() {
           </div>
 
           {/* Step 3 */}
-          <div className="w-full max-w-[930px] mx-auto flex gap-0">
+          <div className="w-full max-w-[930px] mx-auto flex gap-0 items-center">
             {/* Left Image Block */}
             <div className="w-full lg:w-1/2  p-4">
               <span className="block w-full h-[370px] bg-center bg-cover rounded-[25px]" style={{ backgroundImage: "url('/assets/home/home-7.jpg')" }} ></span>
@@ -532,7 +604,7 @@ export default function Home() {
           </div>
 
           {/* Step 4 */}
-          <div className="w-full max-w-[930px] mx-auto flex gap-0">
+          <div className="w-full max-w-[930px] mx-auto flex gap-5 items-center">
             {/* Left Image Block */}
             <div className="w-full lg:w-2/3 p-4">
               {/* CTA 1 */}
@@ -557,7 +629,7 @@ export default function Home() {
           </div>
 
           {/* Step 5 */}
-          <div className="w-full max-w-[930px] mx-auto flex gap-0">
+          <div className="w-full max-w-[930px] mx-auto flex gap-0 items-center">
             {/* Left Image Block */}
             <div className="w-full lg:w-1/2  p-4">
               <span className="block w-full h-[370px] bg-center bg-cover rounded-[25px]" style={{ backgroundImage: "url('/assets/home/home-9.jpg')" }} ></span>
@@ -581,11 +653,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <button className="max-w-[400px] mx-auto w-full flex justify-center items-center font-bold text-white text-[35px] leading-[40px] py-6 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
-            Start Trial
+          <button className="max-w-[320px] mx-auto w-full flex justify-center items-center font-bold text-white text-[35px] leading-[40px] py-4 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
+            Start Free Trial
           </button>
         </div>
-
       </section >
 
       {/* Sectione 6 Real Results From Creators Like You */}
@@ -610,6 +681,28 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div
+        className="px-4 max-w-[900px] mx-auto relative overflow-hidden">
+        <Slider {...settingsOne}>
+          {testimonialsOne.map((item, index) => (
+            <div key={index} className="p-5">
+              <div className="h-full p-6 shadow-[0px_4px_15px_rgba(0,0,0,0.4)]">
+                <img src="/assets/brand-icon/star.png" alt="stars" className="h-5 mb-4" />
+                <div className="flex items-center mb-4">
+                  <img src={item.img} alt={item.name} className="w-10 h-10 rounded-full object-cover" />
+                  <div className="ml-4">
+                    <p className="font-normal text-[18px] leading-[28px] text-[#151515]">{item.name}</p>
+                    <p className="font-normal text-[18px] leading-[28px] text-[#151515]">{item.role}</p>
+                  </div>
+                </div>
+                <h3 className="font-bold text-[18px] leading-[28px] text-[#151515] py-3">"{item.title}"</h3>
+                <p className="font-normal text-[18px] leading-[28px] text-[#151515]">{item.text}</p>
+              </div>
+            </div>
+          ))}
+        </Slider>
+        <button className="max-w-[791px] w-full mx-auto flex mt-10 mb-20 justify-center items-center font-medium text-white text-[35px] leading-[40px] py-4 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer"> Start Free Trial </button>
+      </div>
 
       {/* Sectione 7 Mini Lessons Academy Helps You Create  */}
       <section className="py-10">
@@ -688,7 +781,7 @@ export default function Home() {
               </div>
             </div>
           </div >
-          <button className="max-w-[791px] w-full mx-auto flex justify-center items-center font-medium text-white text-[35px] leading-[40px] py-6 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
+          <button className="max-w-[791px] w-full mx-auto flex justify-center items-center font-medium text-white text-[35px] leading-[40px] py-4 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
             Start Trial
           </button>
         </div >
@@ -783,8 +876,8 @@ export default function Home() {
           maskSize: '100% 100%',
         }}
       >
-        <Slider {...settings}>
-          {testimonials.map((item, index) => (
+        <Slider {...settingsTwo}>
+          {testimonialsTwo.map((item, index) => (
             <div key={index} className="px-[5px]">
               <div className="h-full p-6 border border-[#F1F1F1] rounded-[10px] shadow-[0_0_2.8px_0_rgb(191,191,191,0.25)] cursor-pointer">
                 <img src={item.stars} alt="stars" className="h-5 mb-4" />
@@ -800,7 +893,7 @@ export default function Home() {
             </div>
           ))}
         </Slider>
-        <button className="max-w-[791px] w-full mx-auto flex mt-10 mb-20 justify-center items-center font-medium text-white text-[35px] leading-[40px] py-6 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer"> Start Free Trial </button>
+        <button className="max-w-[791px] w-full mx-auto flex mt-10 mb-20 justify-center items-center font-medium text-white text-[35px] leading-[40px] py-4 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer"> Start Free Trial </button>
       </div>
 
       {/* Sectione 11 You're 90 Seconds Away From a Product*/}
@@ -856,7 +949,7 @@ export default function Home() {
           </div>
 
         </div>
-        <button className="max-w-[350px] mt-10 w-full mx-auto flex justify-center items-center font-medium text-white text-[35px] leading-[40px] py-6 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
+        <button className="max-w-[350px] mt-10 w-full mx-auto flex justify-center items-center font-medium text-white text-[35px] leading-[40px] py-4 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
           Start Free Trial
         </button>
       </section>
@@ -869,7 +962,7 @@ export default function Home() {
             {accordionData.map((item, index) => {
               const isActive = activeIndex === index;
               return (
-                <div className="tab border-b border-gray-300" key={index}>
+                <div className="tab border-b-[2px] border-dark" key={index}>
                   <div className={`tab-head flex justify-between items-center cursor-pointer transition-all duration-200 py-6 ${isActive ? "p-6 pb-3" : "hover:p-6 hover:bg-[#EED8FF]"}`} onClick={() => toggleTab(index)} >
                     <h3 className="font-bold text-black text-[20px] leading-[28px]"> {item.title} </h3> <div>
                       {isActive ? (
@@ -905,7 +998,7 @@ export default function Home() {
               {/* CTA 1 */}
               <div className="ctaBlock p-4 h-full flex flex-col justify-between items-center gap-3">
                 <p className="font-medium text-black text-[26px] leading-[34px]"> Join 10,000+ educators, coaches, authors & trainers already turning their expertise into income and impact.</p>
-                <button className="max-w-[791px] w-full mx-auto flex justify-center items-center font-medium text-white text-[35px] leading-[40px] py-5 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
+                <button className="max-w-[791px] w-full mx-auto flex justify-center items-center font-medium text-white text-[35px] leading-[40px] py-4 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer">
                   Start Free Trial
                 </button>
               </div>
