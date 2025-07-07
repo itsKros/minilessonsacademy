@@ -7,6 +7,7 @@
   --light-purple: #9B0FF1;
   --dark-purple: #59098B;
   --poppins-font: 'Poppins', sans-serif;
+  --oxford-blue: #14223C;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
 /* Background Colors */
 .bg-lightPurple         { background-color: var(--light-purple) !important; }
 .bg-darkPurple          { background-color: var(--dark-purple) !important; }
+.bg-oxfordBlue          { background-color: var(--oxford-blue) !important; }
 .hover\\:bg-lightPurple:hover { background-color: var(--light-purple) !important; }
 .hover\\:bg-darkPurple:hover  { background-color: var(--dark-purple) !important; }
 

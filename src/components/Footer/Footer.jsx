@@ -3,9 +3,9 @@ import { Link } from 'react-router';
 
 export default function Footer() {
   return (
-    <footer class="text-gray-600 bg-darkPurple  body-font">
-      <div class="container max-w-7xl py-15 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div class="grid grid-cols-4 gap-4 w-full -mb-10 md:mt-0 mt-10 md:text-left text-center">
+    <footer class="bg-oxfordBlue  body-font">
+      <div class="max-w-6xl py-15 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div class="lg:w-1/1 grid grid-cols-4 gap-4 w-full -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div class="w-full px-4">
             <h2 class="title-font text-[22px] leading-[22px] font-bold text-white tracking-widest mb-3">Partners</h2>
             <nav class="list-none mb-10">
@@ -38,15 +38,15 @@ export default function Footer() {
             </nav>
           </div>
         </div>
-        <div class="w-70 flex-shrink-0 md:mx-0 mx-auto text-right">
+        <div class="lg:w-2/8 flex-shrink-0 md:mx-0 mx-auto text-right">
           <p class="mb-2 text-[13px] leading-[22px] font-bold text-white/75">© 2025 MLA. All Rights Reserved.</p>
-          <p class="mb-2 text-[13px] leading-[22px] font-bold text-white/75 text-right">1375 Leeser Avenue Akron, Ohio 44314</p>
-          <span class="inline-flex gap-3 text-[20px] lg:ml-auto lg:mt-0 mt-6 w-full justify-center md:justify-start md:w-auto">
-            <Link to={''} class="px-3.5 py-2 rounded text-white bg-[#3b5997] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-facebook-f"></i></Link>
-            <Link to={''} class="px-3 py-2 rounded text-white bg-[#262626] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-instagram"></i></Link>
-            <Link to={''} class="px-3 py-2 rounded text-white bg-[#000000] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-x-twitter"></i></Link>
-            <Link to={''} class="px-3 py-2 rounded text-white bg-[#650aaa] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-tiktok"></i></Link>
-            <Link to={''} class="px-3 py-2 rounded text-white bg-[#cd201f] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-youtube"></i></Link>
+          <p class="mb-2 max-w-[200px] ml-auto text-[13px] leading-[22px] font-bold text-white/75 text-right">1375 Leeser Avenue Akron, Ohio 44314</p>
+          <span class="inline-flex gap-3 text-[20px] mt-5 w-full justify-center md:justify-start md:w-auto">
+            <Link to={''} class="px-3.5 py-1.5 rounded text-white bg-[#3b5997] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-facebook-f"></i></Link>
+            <Link to={''} class="px-3 py-1.5 rounded text-white bg-[#262626] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-instagram"></i></Link>
+            <Link to={''} class="px-3 py-1.5 rounded text-white bg-[#000000] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-x-twitter"></i></Link>
+            <Link to={''} class="px-3 py-1.5 rounded text-white bg-[#650aaa] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-tiktok"></i></Link>
+            <Link to={''} class="px-2.5 py-1.5 rounded text-white bg-[#cd201f] transition-transform duration-300 hover:scale-90"><i class="fa-brands fa-youtube"></i></Link>
           </span>
         </div>
 
