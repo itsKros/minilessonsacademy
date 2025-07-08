@@ -777,7 +777,7 @@ export default function Home() {
           <div class="max-w-[975px] mx-auto flex items-center gap-5">
             <div class="p-2 sm:p-4 md:w-1/2 w-full">
               <div class="h-full p-5 rounded rounded-[25px] border border-[1px] border-[#9b0ff1]">
-                <h3 className="font-bold text-black text-[30px] leading-[39px] mb-3"><span class="text-[#9b0ff1]">Your Thinking Partner</span>, Not Just a Robot</h3>
+                <h3 className="font-bold text-black text-[30px] leading-[39px] mb-3"><span class="text-[#9b0ff1]">Your Thinking Partner</span>,<br/> Not Just a Robot</h3>
                 <p className="font-medium text-black text-[18px] leading-[23px] mb-3">Most AI tools produce generic content.</p>
                 <p className="font-medium text-black text-[18px] leading-[23px] mb-3">Mini Lessons Creates:</p>
                 <div class="space-y-5 ">
@@ -943,8 +943,12 @@ export default function Home() {
             </div>
           ))}
         </Slider>
-        <button className="max-w-[791px] w-full mx-auto flex mt-10 mb-20 justify-center items-center font-medium text-white text-[35px] leading-[40px] py-4 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer"> Start Free Trial </button>
       </div>
+      <div className="p-3"> 
+        <button className="max-w-[791px] w-full mx-auto flex mt-5 mb-0 sm:mb-10 justify-center items-center font-medium text-white text-[35px] leading-[40px] py-4 px-8 focus:outline-none rounded-lg transition duration-300 bg-gradient-to-b from-[#9B0FF1] to-[#59098B] hover:bg-[linear-gradient(180deg,_#9B0FF1CC_0%,_#59098BCC_100%)] cursor-pointer"> Start Free Trial </button>
+
+      </div>
+
 
       {/* Sectione 11 You're 90 Seconds Away From a Product*/}
       <section className="py-10">
