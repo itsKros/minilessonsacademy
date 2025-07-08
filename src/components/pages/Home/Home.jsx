@@ -185,19 +185,20 @@ const PrevArrow = ({ onClick }) => (
     <ChevronLeft className="w-5 h-5 text-[#909090]" />
   </button>
 );
+
 const settingsOne = {
   dots: false,
   arrows: true,
-  infinite: true,
-  autoplay: true,
-  autoplaySpeed: 0,
-  speed: 10000,
-  cssEase: "linear",
-  pauseOnHover: false,
+  infinite: true,           // Keeps looping
+  autoplay: true,           // Enables auto scroll
+  autoplaySpeed: 3000,      // 3 seconds per slide
+  speed: 500,               // Transition duration (in ms)
+  cssEase: "ease",          // Smooth easing
+  pauseOnHover: true,       // Pause on mouse hover
   slidesToShow: 2,
   slidesToScroll: 1,
-  swipe: false,
-  draggable: false,
+  swipe: true,              // Allow swipe on mobile/desktop
+  draggable: true,          // Allow dragging with mouse
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
   responsive: [
@@ -209,6 +210,9 @@ const settingsOne = {
     },
   ],
 };
+
+
+
 const settingsTwo = {
   dots: false,
   arrows: false,
