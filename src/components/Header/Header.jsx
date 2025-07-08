@@ -273,6 +273,155 @@ export default function Header() {
             <i className="fa-solid fa-xmark"></i>
           </button>
 
+          <nav className="block sm:hidden md:flex items-center ml-auto space-x">
+            {/* Product (with dropdown) */}
+            <div
+              className="relative"
+              onMouseEnter={() => setOpenDropdown('product')}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              <button className="flex items-center gap-1 py-1 font-medium text-black text-[19px] leading-[28px] hover:text-purple-700 cursor-pointer">
+                Product
+                <ChevronDown size={14} />
+              </button>
+
+              {openDropdown === 'product' && (
+                <div className="absolute overflow-hidden left-0 mt--2 w-44 rounded-sm bg-white border shadow-lg z-50 flex flex-col animate-fade-in">
+                  <Link to="/product/overview" className="px-4 py-2 font-[500] text-[17px] leading-[28px] text-[#334155] hover:bg-gray-100 border-b border-dashed border-gray-200 border-bottom">  Overview </Link>
+                  <Link to="/product/pricing" className="px-4 py-2 font-[500] text-[17px] leading-[28px] text-[#334155] hover:bg-gray-100 border-b border-dashed border-gray-200 border-bottom"> Pricing </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Features (with dropdown) */}
+            <div
+              className=""
+              onMouseEnter={() => setOpenDropdown('features')}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              <button className="flex items-center gap-1 py-1 font-medium text-black text-[19px] leading-[28px] hover:text-purple-700 cursor-pointer">
+                Features
+                <ChevronDown size={14} />
+              </button>
+
+              {openDropdown === 'features' && (
+                <div className="absolute left-0 mt--3 w-full rounded-sm z-50 flex flex-col animate-fade-in">
+                  <section className="text-gray-600 body-font ">
+                    <div className="container py-4 px-8 mx-auto">
+                      <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-4">
+                        <Link to={''} className="flex group  border border-gray-200 py-2 px-3.5 rounded-sm items-center justify-center bg-white/80 backdrop-blur-sm hover:bg-[#650AAA] transition-colors duration-500 ease-in-out">
+                          <div className="w-18 h-18 p-3 inline-flex border border-[1px] border-[#450077] items-center justify-center bg-white text-indigo-500 flex-shrink-0 rounded-sm">
+                            <img alt="content" className="object-cover object-center h-full w-full filter group-hover:brightness-50 filter-none transition duration-300" src="/assets/menu/menu-1.png" />
+                          </div>
+                          <div className="flex-grow pl-4">
+                            <h2 className="text-gray-900 text-lg title-font font-medium mb-1 group-hover:text-white">Shooting Stars</h2>
+                            <p className="leading-relaxed text-[#1F2D3D] group-hover:text-white font-light">Launch engaging courses and lessons in minutes</p>
+                          </div>
+                        </Link>
+                        <Link to={''} className="flex group  border border-gray-200 py-2 px-3.5 rounded-sm items-center justify-center bg-white/80 backdrop-blur-sm hover:bg-[#650AAA] transition-colors duration-500 ease-in-out">
+                          <div className="w-18 h-18 p-3 inline-flex border border-[1px] border-[#450077] items-center justify-center bg-white text-indigo-500 flex-shrink-0 rounded-sm">
+                            <img alt="content" className="object-cover object-center h-full w-full filter group-hover:brightness-50 filter-none transition duration-300" src="/assets/menu/menu-1.png" />
+                          </div>
+                          <div className="flex-grow pl-4">
+                            <h2 className="text-gray-900 text-lg title-font font-medium mb-1 group-hover:text-white">Create eBooks</h2>
+                            <p className="leading-relaxed text-[#1F2D3D] group-hover:text-white font-light">Transform your ideas into finished books in 3 clicks</p>
+                          </div>
+                        </Link>
+                        <Link to={''} className="flex group  border border-gray-200 py-2 px-3.5 rounded-sm items-center justify-center bg-white/80 backdrop-blur-sm hover:bg-[#650AAA] transition-colors duration-500 ease-in-out">
+                          <div className="w-18 h-18 p-3 inline-flex border border-[1px] border-[#450077] items-center justify-center bg-white text-indigo-500 flex-shrink-0 rounded-sm">
+                            <img alt="content" className="object-cover object-center h-full w-full filter group-hover:brightness-50 filter-none transition duration-300" src="/assets/menu/menu-3.png" />
+                          </div>
+                          <div className="flex-grow pl-4">
+                            <h2 className="text-gray-900 text-lg title-font font-medium mb-1 group-hover:text-white">Create Audiobooks</h2>
+                            <p className="leading-relaxed text-[#1F2D3D] group-hover:text-white font-light">Convert your courses into audiobooks in a snap</p>
+                          </div>
+                        </Link>
+                        <Link to={''} className="flex group  border border-gray-200 py-2 px-3.5 rounded-sm items-center justify-center bg-white/80 backdrop-blur-sm hover:bg-[#650AAA] transition-colors duration-500 ease-in-out">
+                          <div className="w-18 h-18 p-3 inline-flex border border-[1px] border-[#450077] items-center justify-center bg-white text-indigo-500 flex-shrink-0 rounded-sm">
+                            <img alt="content" className="object-cover object-center h-full w-full filter group-hover:brightness-50 filter-none transition duration-300" src="/assets/menu/menu-4.png" />
+                          </div>
+                          <div className="flex-grow pl-4">
+                            <h2 className="text-gray-900 text-lg title-font font-medium mb-1 group-hover:text-white">Ai Coach</h2>
+                            <p className="leading-relaxed text-[#1F2D3D] group-hover:text-white font-light">Your all-in-one coach for marketing, ads, copy, and more</p>
+                          </div>
+                        </Link>
+                        <Link to={''} className="flex group  border border-gray-200 py-2 px-3.5 rounded-sm items-center justify-center bg-white/80 backdrop-blur-sm hover:bg-[#650AAA] transition-colors duration-500 ease-in-out">
+                          <div className="w-18 h-18 p-3 inline-flex border border-[1px] border-[#450077] items-center justify-center bg-white text-indigo-500 flex-shrink-0 rounded-sm">
+                            <img alt="content" className="object-cover object-center h-full w-full filter group-hover:brightness-50 filter-none transition duration-300" src="/assets/menu/menu-5.png" />
+                          </div>
+                          <div className="flex-grow pl-4">
+                            <h2 className="text-gray-900 text-lg title-font font-medium mb-1 group-hover:text-white">Marketing VIP Area</h2>
+                            <p className="leading-relaxed text-[#1F2D3D] group-hover:text-white font-light">Grow your content with our unique marketing arena </p>
+                          </div>
+                        </Link>
+                        <Link to={''} className="flex group  border border-gray-200 py-2 px-3.5 rounded-sm items-center justify-center bg-white/80 backdrop-blur-sm hover:bg-[#650AAA] transition-colors duration-500 ease-in-out">
+                          <div className="w-18 h-18 p-3 inline-flex border border-[1px] border-[#450077] items-center justify-center bg-white text-indigo-500 flex-shrink-0 rounded-sm">
+                            <img alt="content" className="object-cover object-center h-full w-full filter group-hover:brightness-50 filter-none transition duration-300" src="/assets/menu/menu-6.png" />
+                          </div>
+                          <div className="flex-grow pl-4">
+                            <h2 className="text-gray-900 text-lg title-font font-medium mb-1 group-hover:text-white">AI Cover Generator</h2>
+                            <p className="leading-relaxed text-[#1F2D3D] group-hover:text-white font-light">Instantly design eye-catching covers, matching your brand</p>
+                          </div>
+                        </Link>
+                        <Link to={''} className="flex group  border border-gray-200 py-2 px-3.5 rounded-sm items-center justify-center bg-white/80 backdrop-blur-sm hover:bg-[#650AAA] transition-colors duration-500 ease-in-out">
+                          <div className="w-18 h-18 p-3 inline-flex border border-[1px] border-[#450077] items-center justify-center bg-white text-indigo-500 flex-shrink-0 rounded-sm">
+                            <img alt="content" className="object-cover object-center h-full w-full filter group-hover:brightness-50 filter-none transition duration-300" src="/assets/menu/menu-7.png" />
+                          </div>
+                          <div className="flex-grow pl-4">
+                            <h2 className="text-gray-900 text-lg title-font font-medium mb-1 group-hover:text-white">Create Quizzes</h2>
+                            <p className="leading-relaxed text-[#1F2D3D] group-hover:text-white font-light">Build interactive quizzes, boosting engagement</p>
+                          </div>
+                        </Link>
+                        <Link to={''} className="flex group  border border-gray-200 py-2 px-3.5 rounded-sm items-center justify-center bg-white/80 backdrop-blur-sm hover:bg-[#650AAA] transition-colors duration-500 ease-in-out">
+                          <div className="w-18 h-18 p-3 inline-flex border border-[1px] border-[#450077] items-center justify-center bg-white text-indigo-500 flex-shrink-0 rounded-sm">
+                            <img alt="content" className="object-cover object-center h-full w-full filter group-hover:brightness-50 filter-none transition duration-300" src="/assets/menu/menu-8.png" />
+                          </div>
+                          <div className="flex-grow pl-4">
+                            <h2 className="text-gray-900 text-lg title-font font-medium mb-1 group-hover:text-white">Online Course Editor</h2>
+                            <p className="leading-relaxed text-[#1F2D3D] group-hover:text-white font-light">Quickly polish and edit your courses</p>
+                          </div>
+                        </Link>
+                        <Link to={''} className="flex group  border border-gray-200 py-2 px-3.5 rounded-sm items-center justify-center bg-white/80 backdrop-blur-sm hover:bg-[#650AAA] transition-colors duration-500 ease-in-out">
+                          <div className="w-18 h-18 p-3 inline-flex border border-[1px] border-[#450077] items-center justify-center bg-white text-indigo-500 flex-shrink-0 rounded-sm">
+                            <img alt="content" className="object-cover object-center h-full w-full filter group-hover:brightness-50 filter-none transition duration-300" src="/assets/menu/menu-9.png" />
+                          </div>
+                          <div className="flex-grow pl-4">
+                            <h2 className="text-gray-900 text-lg title-font font-medium mb-1 group-hover:text-white">Courses Hosting</h2>
+                            <p className="leading-relaxed text-[#1F2D3D] group-hover:text-white font-light">Share, manage and monetize your courses with one click</p>
+                          </div>
+                        </Link>
+
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              )}
+            </div>
+
+            {/* Who We Help (no dropdown) */}
+            <div
+              className="relative"
+              onMouseEnter={() => setOpenDropdown('who_we_help')}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              <button className="flex items-center gap-1 py-1 font-medium text-black text-[19px] leading-[28px] hover:text-purple-700 cursor-pointer">
+                Who We Help
+                <ChevronDown size={14} />
+              </button>
+
+              {openDropdown === 'who_we_help' && (
+                <div className="absolute overflow-hidden left-0 mt--2 w-44 rounded-sm bg-white border shadow-lg z-50 flex flex-col animate-fade-in">
+                  <Link to="" className="px-4 py-2 font-[500] text-[17px] leading-[28px] text-[#334155] hover:bg-gray-100 border-b border-dashed border-gray-200 border-bottom"> Educators</Link>
+                  <Link to="" className="px-4 py-2 font-[500] text-[17px] leading-[28px] text-[#334155] hover:bg-gray-100 border-b border-dashed border-gray-200 border-bottom">Authors</Link>
+                  <Link to="" className="px-4 py-2 font-[500] text-[17px] leading-[28px] text-[#334155] hover:bg-gray-100 border-b border-dashed border-gray-200 border-bottom"> Coaches</Link>
+                  <Link to="" className="px-4 py-2 font-[500] text-[17px] leading-[28px] text-[#334155] hover:bg-gray-100">Content Creaters</Link>
+                </div>
+              )}
+            </div>
+            {/* Pricing */}
+            <Link to={'/pricing-plans-cb-t64v1'} className="font-medium text-black text-[19px] leading-[28px] hover:text-purple-700 cursor-pointer">Prices</Link>
+          </nav>
+
           <img src="/mla_logo.webp" alt="Logo" className="w-30 mx-auto mt-10" />
 
           <button className="flex justify-center items-center mt-10 font-medium text-white text-[21px] leading-[21px] bg-darkPurple border-0 py-4 px-8 w-full focus:outline-none hover:bg-indigo-600 rounded text-lg">
