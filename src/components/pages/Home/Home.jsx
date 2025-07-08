@@ -693,8 +693,8 @@ export default function Home() {
 
       {/* Sectione 6 Real Results From Creators Like You */}
       <section className="py-10 pt-0">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-row flex-wrap gap-10 ">
-          <h2 className="max-w-[450px] mx-auto  text-center w-full mb-10 font-bold font-bold text-black text-[40px] leading-[50px] sm:text-[50px] sm:leading-[65px]"><span class="text-[#9b0ff1]">Real Results</span> From Creators Like You</h2>
+        <div className="max-w-7xl mx-auto  flex flex-row flex-wrap gap-10 ">
+          <h2 className="max-w-[450px] mx-auto  text-center w-full font-bold font-bold text-black text-[40px] leading-[50px] sm:text-[50px] sm:leading-[65px]"><span class="text-[#9b0ff1]">Real Results</span> From Creators Like You</h2>
           {/* <div class="flex flex-wrap -m-4">
             <div class="p-4 md:w-1/2 w-full">
               <div class="h-full p-8  shadow-[0px_4px_15px_rgba(0,0,0,0.4)]">
