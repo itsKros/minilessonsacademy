@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
+
 // Accordion Open
 const accordionData = [
   {
@@ -61,21 +62,21 @@ const testimonialsOne = [
     title: "I monetized my expertise without the tech nightmare.",
     text: "For years, I had notebooks of prompts and exercises but couldn't turn them into a course. Mini Lessons transformed my scattered methods into a coherent system in one afternoon. Now new subscribers receive a valuable mini-course automatically, and my close rate increased from 30% to 65%."
   },
-   {
+  {
     name: "Lily",
     role: "Wellness Author & Mom",
     img: "/assets/home/testimonial/3.png",
     title: "I finally published what I've been thinking about for years.",
     text: "My mindful eating course outline sat untouched for three years. With Mini Lessons, I created a complete course and companion audiobook in one evening. I launched it at $97 and made more in two weeks than I do in six months, while being fully present for my family."
   },
-    {
+  {
     name: "Necie",
     role: "Entrepreneur",
     img: "/assets/home/testimonial/necie.jpg",
     title: "This is a true money saver and success accelerator. Highly recommended!",
     text: "Mini Lesson Academy is a real game changer! In less than 5 minutes, I created an audiobook for my virtual tea party - no more expensive freelancers or countless apps. The platform’s ease-of-use, beautiful cover creation, and streamlined functionality ended my overwhelm, boosted my productivity, and empowered me as a solo entrepreneur."
   },
-   
+
 ];
 // Testimonial One Close
 
@@ -110,56 +111,56 @@ const testimonialsTwo = [
     stars: "/assets/brand-icon/star.png",
     text: "As a consultant, I needed a platform that would allow me to share my expertise without spending all my time writing. Mini Lessons Academy has been perfect! I’ve already created three guides and a full course—all within a week!"
   },
-   {
+  {
     name: "Carlos R",
     role: "Leadership Trainer",
     img: "/assets/home/testimonial/5.png",
     stars: "/assets/brand-icon/star.png",
     text: "Mini Lessons Academy gave me the freedom to focus on my clients rather than wasting time on course creation. In just a few clicks, I had a full-length course ready to go. It’s saved me hours!"
   },
-   {
+  {
     name: "Tanya G",
     role: "Digital Marketing Expert",
     img: "/assets/home/testimonial/6.webp",
     stars: "/assets/brand-icon/star.png",
     text: "I’ve never seen anything like Mini Lessons Academy before! I can create professional courses and guides in minutes, and my audience is loving the content. This is by far the easiest and most efficient content creation tool I’ve used."
   },
-     {
+  {
     name: "Brandon T",
     role: "Serial Entrepreneur",
     img: "/assets/home/testimonial/7.webp",
     stars: "/assets/brand-icon/star.png",
     text: "As a busy entrepreneur, I was looking for a way to monetize my knowledge without spending days on content creation. Mini Lessons Academy made it so simple to create courses and books, and my sales have never been better."
   },
-      {
+  {
     name: "Rachel M",
     role: "Health Coach",
     img: "/assets/home/testimonial/8.png",
     stars: "/assets/brand-icon/star.png",
     text: "I’m so impressed with Mini Lessons Academy! It took the guesswork out of course creation and allowed me to focus on what I love—helping my clients. I’ve already doubled my product offerings thanks to this platform."
   },
-       {
+  {
     name: "Mike D",
     role: "E-Learning Entrepreneur",
     img: "/assets/home/testimonial/9.png",
     stars: "/assets/brand-icon/star.png",
     text: "Mini Lessons Academy is the best tool I’ve used for scaling my online education business. The AI-generated content is spot on, and I’ve seen a huge increase in engagement from my students since I started using it."
   },
-      {
+  {
     name: "Jessica K",
     role: "Fitness Coach",
     img: "/assets/home/testimonial/10.png",
     stars: "/assets/brand-icon/star.png",
     text: "As a fitness coach, I needed a way to package my knowledge into sellable products, but I didn’t have the time to write everything myself. Mini Lessons Academy made it effortless to create courses and guides that my clients love."
   },
-        {
+  {
     name: "George Hartsfield",
     role: "Skills Trainer",
     img: "/assets/home/testimonial/george.jpg",
     stars: "/assets/brand-icon/star.png",
     text: "One of the most impressive aspects of my experience was their exceptional customer service. I encountered an issue during the process, and to my surprise, a call was scheduled immediately. Even more impressive was the fact that the owner personally joined the call to help resolve the problem."
   },
-        {
+  {
     name: "Jessica Thatcher",
     role: "Educator",
     img: "/assets/home/testimonial/11.jpg",
@@ -171,7 +172,7 @@ const testimonialsTwo = [
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute border-[3px] border-[#909090] right-[-10px] top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
+    className="absolute cursor-pointer border-[3px] border-[#909090] right-[-10px] top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
   >
     <ChevronRight className="w-5 h-5 text-[#909090]" />
   </button>
@@ -180,25 +181,25 @@ const NextArrow = ({ onClick }) => (
 const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute border-[3px] border-[#909090] left-[-10px] top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
+    className="absolute cursor-pointer border-[3px] border-[#909090] left-[-10px] top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
   >
     <ChevronLeft className="w-5 h-5 text-[#909090]" />
   </button>
 );
 
 const settingsOne = {
-  dots: false,
+  dots: true, // ✅ Show pagination dots
   arrows: true,
-  infinite: true,           // Keeps looping
-  autoplay: true,           // Enables auto scroll
-  autoplaySpeed: 3000,      // 3 seconds per slide
-  speed: 500,               // Transition duration (in ms)
-  cssEase: "ease",          // Smooth easing
-  pauseOnHover: true,       // Pause on mouse hover
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  speed: 500,
+  cssEase: "ease",
+  pauseOnHover: true,
   slidesToShow: 2,
   slidesToScroll: 1,
-  swipe: true,              // Allow swipe on mobile/desktop
-  draggable: true,          // Allow dragging with mouse
+  swipe: true,
+  draggable: true,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
   responsive: [
@@ -210,7 +211,6 @@ const settingsOne = {
     },
   ],
 };
-
 
 
 const settingsTwo = {
@@ -244,6 +244,67 @@ const settingsTwo = {
 // Testimonial Close
 
 export default function Home() {
+
+  // Video Open
+  useEffect(() => {
+    const embedId = 'vidalytics_embed_3w0cbex34DPfSjQm';
+    const loaderUrl = 'https://fast.vidalytics.com/embeds/UNl1lqys/3w0cbex34DPfSjQm/loader.min.js';
+    const playerUrl = 'https://fast.vidalytics.com/embeds/UNl1lqys/3w0cbex34DPfSjQm/player.min.js';
+
+    (function (v, i, d, a, l, y, t, c, s) {
+      y = '_' + d.toLowerCase();
+      c = d + 'L';
+      if (!v[d]) { v[d] = {}; }
+      if (!v[c]) { v[c] = {}; }
+      if (!v[y]) { v[y] = {}; }
+      const vl = 'Loader';
+      let vli = v[y][vl];
+      let vsl = v[c][vl + 'Script'];
+      let vlf = v[c][vl + 'Loaded'];
+      const ve = 'Embed';
+
+      if (!vsl) {
+        vsl = function (u, cb) {
+          if (t) { cb(); return; }
+          s = i.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = u;
+
+          if (s.readyState) {
+            s.onreadystatechange = function () {
+              if (s.readyState === 'loaded' || s.readyState === 'complete') {
+                s.onreadystatechange = null;
+                vlf = 1;
+                cb();
+              }
+            };
+          } else {
+            s.onload = function () {
+              vlf = 1;
+              cb();
+            };
+          }
+
+          i.getElementsByTagName('head')[0].appendChild(s);
+        };
+      }
+
+      vsl(loaderUrl, function () {
+        if (!vli) {
+          const vlc = v[c][vl];
+          vli = new vlc();
+        }
+        vli.loadScript(playerUrl, function () {
+          const vec = v[d][ve];
+          t = new vec();
+          t.run(a);
+        });
+      });
+    })(window, document, 'Vidalytics', embedId, 'https://fast.vidalytics.com/embeds/UNl1lqys/3w0cbex34DPfSjQm/');
+
+  }, []);
+  // Video Close
 
   // Accordion Open  
   const [activeIndex, setActiveIndex] = useState(null);
@@ -316,61 +377,17 @@ export default function Home() {
             Start Free Trial
           </button>
 
-
           {/* Vidalytics Embed */}
-          <div
+          <div className="max-w-[750px] pb-0"
             id="vidalytics_embed_3w0cbex34DPfSjQm"
-            style={{ width: '100%', position: 'relative', paddingTop: '56.25%' }}
-          ></div>
-
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{
-              __html: `
-      (function (v, i, d, a, l, y, t, c, s) {
-        y = '_' + d.toLowerCase(); c = d + 'L';
-        if (!v[d]) { v[d] = {}; }
-        if (!v[c]) { v[c] = {}; }
-        if (!v[y]) { v[y] = {}; }
-        var vl = 'Loader', vli = v[y][vl], vsl = v[c][vl + 'Script'], vlf = v[c][vl + 'Loaded'], ve = 'Embed';
-        if (!vsl) {
-          vsl = function (u, cb) {
-            if (t) { cb(); return; }
-            s = i.createElement("script");
-            s.type = "text/javascript";
-            s.async = 1;
-            s.src = u;
-            if (s.readyState) {
-              s.onreadystatechange = function () {
-                if (s.readyState === "loaded" || s.readyState == "complete") {
-                  s.onreadystatechange = null; vlf = 1; cb();
-                }
-              };
-            } else {
-              s.onload = function () { vlf = 1; cb(); };
-            }
-            i.getElementsByTagName("head")[0].appendChild(s);
-          };
-        }
-        vsl(l + 'loader.min.js', function () {
-          if (!vli) {
-            var vlc = v[c][vl];
-            vli = new vlc();
-          }
-          vli.loadScript(l + 'player.min.js', function () {
-            var vec = v[d][ve];
-            t = new vec(); t.run(a);
-          });
-        });
-      })(window, document, 'Vidalytics', 'vidalytics_embed_3w0cbex34DPfSjQm', 'https://fast.vidalytics.com/embeds/UNl1lqys/3w0cbex34DPfSjQm/');
-    `,
-            }}
-          />
+            style={{ width: '80%', position: 'relative', paddingTop: '56.25%' }}
+          /> 
         </div>
+
       </section>
 
       {/* Sectione 3 Day Free Trail  */}
-      <section className="py-10 bg-[linear-gradient(180deg,_#FFFFFF_0%,_#FFF8E8_34.62%,_#FBF1F3_50%,_#FFFFFF_100%)]">
+      <section className="py-10 mt-[0px] sm:mt-[-200px] bg-[linear-gradient(180deg,_#FFFFFF_0%,_#FFF8E8_34.62%,_#FBF1F3_50%,_#FFFFFF_100%)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-30 lg:px-8 flex flex-row flex-wrap gap-10">
           <h2 className="text-center w-full mb-10 font-bold font-bold text-black text-[50px] leading-[65px]">What You Get</h2>
           <div class="w-[1000px] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-20 sm:gap-15">
@@ -424,39 +441,41 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-30 lg:px-8 flex flex-row flex-wrap gap-4">
           <h2 className="w-[650px] mx-auto font-bold text-[40px] leading-[45px] sm:text-[50px] sm:leading-[70px] text-center text-transparent bg-clip-text bg-[linear-gradient(180deg,_#9B0FF1_0%,_#4A0773_100%)]">Why Most Course Ideas Die Before Launch</h2>
           <p class="text-gray-900 text-lg title-font font-medium w-full text-center">We surveyed 300 first-time creators who joined Mini Lessons Academy.</p>
-          <p class="text-gray-900 text-lg title-font font-medium w-full text-center mb-20">Here's what was killing their progress:</p>
+          <p class="text-gray-900 text-lg title-font font-medium w-full text-center mb-5">Here's what was killing their progress:</p>
 
           <div className="w-[850px] grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-20 mx-auto bg-none sm:bg-[url('/assets/home/home-9.png')] bg-no-repeat bg-cover bg-center rounded-[30px]">
 
-            <div class="w-full p-7 border border-[#ECECEC] bg-white ml-[0px] mt-[0px] sm:ml-[-80px] sm:mt-[20px] shadow-[0_0_30px_4px_rgb(191,191,191,0.25)] rounded-lg flex flex-col-reverse gap-[10px] items-start">
-              <p class="text-gray-900 text-lg title-font font-medium w-full text-left"><b>42% were stuck</b> with no clear roadmap</p>
-              <p class="text-gray-900 text-lg title-font font-medium w-full text-left">"I never knew where to begin."</p>
+            <div class="w-full p-7 border border-[#ECECEC] bg-white ml-[0px] mt-[0px] sm:ml-[-80px] sm:mt-[20px] shadow-[0_0_30px_4px_rgb(191,191,191,0.25)] rounded-lg flex flex-col gap-[10px] items-start">
+              <img alt="content" class="w-8 h-auto" src="/assets/home/close-icon.webp" />
               <h3 class="font-bold text-[30px] leading-[39px] text-[#DA0000] text-left">Analysis Paralysis</h3>
-              <img alt="content" class="w-8 h-auto" src="/assets/home/close-icon.webp" />
+              <p class="text-gray-900 text-lg title-font font-medium w-full text-left">"I never knew where to begin."</p>
+              
+              <p class="text-gray-900 text-lg title-font font-medium w-full text-left"><b>42% were stuck</b> with no clear roadmap</p>
+              
             </div>
-            <div class="w-full p-7 border border-[#ECECEC] bg-white ml-[0px] mt-0 sm:ml-[80px] sm:mt-5 shadow-[0_0_30px_4px_rgb(191,191,191,0.25)] rounded-lg flex flex-col-reverse gap-[10px] items-start">
-              <p class="text-gray-900 text-lg title-font font-medium w-full text-left">38% couldn't transform knowledge into structure</p>
-              <p class="text-gray-900 text-lg title-font font-medium w-full text-left">"I had ideas but couldn't organize them."</p>
-              <h3 class="font-bold text-[30px] leading-[39px] text-[#DA0000] text-left">No Framework</h3>
+            <div class="w-full p-7 border border-[#ECECEC] bg-white ml-[0px] mt-0 sm:ml-[80px] sm:mt-5 shadow-[0_0_30px_4px_rgb(191,191,191,0.25)] rounded-lg flex flex-col gap-[10px] items-start">
               <img alt="content" class="w-8 h-auto" src="/assets/home/close-icon.webp" />
+              <h3 class="font-bold text-[30px] leading-[39px] text-[#DA0000] text-left">No Framework</h3>
+              <p class="text-gray-900 text-lg title-font font-medium w-full text-left">"I had ideas but couldn't organize them."</p>
+              <p class="text-gray-900 text-lg title-font font-medium w-full text-left">38% couldn't transform knowledge into structure</p>
             </div>
             <img src="/assets/home/home-9.png" className="rounded-[30px] block sm:hidden" alt="" />
-            <div class="w-full p-7 border border-[#ECECEC] bg-white ml-[0px] mb-[0px] sm:ml-[-80px] sm:mb-[20px] shadow-[0_0_30px_4px_rgb(191,191,191,0.25)] rounded-lg flex flex-col-reverse gap-[10px] items-start">
-              <p class="text-gray-900 text-lg title-font font-medium w-full text-left"><b>45% were derailed</b> by complex tech</p>
-              <p class="text-gray-900 text-lg title-font font-medium w-full text-left">"I just wanted to teach, not become a web developer."</p>
+            <div class="w-full p-7 border border-[#ECECEC] bg-white ml-[0px] mb-[0px] sm:ml-[-80px] sm:mb-[20px] shadow-[0_0_30px_4px_rgb(191,191,191,0.25)] rounded-lg flex flex-col gap-[10px] items-start">
+              <img alt="content" class="w-8 h-auto" src="/assets/home/close-icon.webp" />
               <h3 class="font-bold text-[30px] leading-[39px] text-[#DA0000] text-left">Technical Overwhelm</h3>
-              <img alt="content" class="w-8 h-auto" src="/assets/home/close-icon.webp" />
+              <p class="text-gray-900 text-lg title-font font-medium w-full text-left">"I just wanted to teach, not become a web developer."</p>
+              <p class="text-gray-900 text-lg title-font font-medium w-full text-left"><b>45% were derailed</b> by complex tech</p>
             </div>
-            <div class="w-full p-7 border border-[#ECECEC] bg-white ml-[0px] mb-0 sm:ml-[80px] sm:mb-5 shadow-[0_0_30px_4px_rgb(191,191,191,0.25)] rounded-lg flex flex-col-reverse gap-[10px] items-start">
-              <p class="text-gray-900 text-lg title-font font-medium w-full text-left"><b>36% couldn't justify costs</b> without revenue</p>
-              <p class="text-gray-900 text-lg title-font font-medium w-full text-left">"I kept paying $200/month while my course idea collected dust." </p>
-              <h3 class="font-bold text-[30px] leading-[39px] text-[#DA0000] text-left">Upfront Costs</h3>
+            <div class="w-full p-7 border border-[#ECECEC] bg-white ml-[0px] mb-0 sm:ml-[80px] sm:mb-5 shadow-[0_0_30px_4px_rgb(191,191,191,0.25)] rounded-lg flex flex-col gap-[10px] items-start">
               <img alt="content" class="w-8 h-auto" src="/assets/home/close-icon.webp" />
+              <h3 class="font-bold text-[30px] leading-[39px] text-[#DA0000] text-left">Upfront Costs</h3>
+              <p class="text-gray-900 text-lg title-font font-medium w-full text-left">"I kept paying $200/month while my course idea collected dust." </p>
+              <p class="text-gray-900 text-lg title-font font-medium w-full text-left"><b>36% couldn't justify costs</b> without revenue</p>
             </div>
           </div>
 
         </div>
-        <div className="w-full max-w-[950px] mx-auto sm:px-6 mb-30 flex flex-col items-center gap-10">
+        <div className="w-full max-w-[1000px] mx-auto sm:px-6 mb-30 flex flex-col items-center gap-10">
           <h2 className="text-center w-full mb-3 font-bold text-black text-[40px] leading-[40px] sm:text-[50px] sm:leading-[65px]"> The True Cost of Staying Stuck </h2>
           <div className="w-full flex flex-wrap -m-4 p-3">
             {/* Left Image Block */}
@@ -575,7 +594,7 @@ export default function Home() {
                 <p className="font-medium text-black text-[20px] leading-[26px]"> Simply type what you want to teach. Our AI Title Generator instantly suggests clear, compelling titles that position your expertise.</p>
                 <div class="space-y-2 mr-[0px] sm:mr-[-50px]">
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> No more agonizing over the "perfect" title</p>
-                  <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Get expert guidance on narrowing your</p>
+                  <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Get expert guidance on narrowing your topic</p>
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Stop second-guessing and start creating immediately</p>
                 </div>
               </div>
@@ -583,7 +602,7 @@ export default function Home() {
           </div>
 
           {/* Step 2 */}
-         <div className="w-full max-w-[930px] mx-auto flex flex-col-reverse sm:flex-row gap-0 items-center mb-10 sm:mb-0">
+          <div className="w-full max-w-[930px] mx-auto flex flex-col-reverse sm:flex-row gap-0 items-center mb-10 sm:mb-0">
 
             {/* Left Image Block */}
             <div className="w-full lg:w-2/3 p-0 sm:p-4">
@@ -741,11 +760,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-row flex-wrap gap-10 ">
           <h3 className="w-full max-w-[600px] mx-auto text-center font-bold text-[40px] leading-[50px] sm:text-[50px] sm:leading-[65px] text-transparent bg-clip-text bg-[linear-gradient(180deg,_#9B0FF1_0%,_#4A0773_100%)]">Mini Lessons Academy Helps You Create:</h3>
           <div class="w-full max-w-[750px] mx-auto space-y-4  ">
-            <p class="inline-block gap-2 font-medium text-black text-[22px] leading-[26px] sm:text-[28px] sm:leading-[26px]"><img class="w-7 h-7" src="/assets/home/greenCheck.svg" /> <span class="font-bold">Lead magnets that convert</span> visitors to subscribers</p>
-            <p class="inline-block gap-2 font-medium text-black text-[22px] leading-[26px] sm:text-[28px] sm:leading-[26px]"><img class="w-7 h-7" src="/assets/home/greenCheck.svg" /><span class="font-bold">E-books that establish</span> your authority</p>
-            <p class="inline-block gap-2 font-medium text-black text-[22px] leading-[26px] sm:text-[28px] sm:leading-[26px]"><img class="w-7 h-7" src="/assets/home/greenCheck.svg" /><span class="font-bold">Courses that generate</span> passive income</p>
-            <p class="inline-block gap-2 font-medium text-black text-[22px] leading-[26px] sm:text-[28px] sm:leading-[26px]"><img class="w-7 h-7" src="/assets/home/greenCheck.svg" /><span class="font-bold">Audiobooks that reach </span> busy learners</p>
-            <p class="inline-block gap-2 font-medium text-black text-[22px] leading-[26px] sm:text-[28px] sm:leading-[26px]"><img class="w-7 h-7" src="/assets/home/greenCheck.svg" /><span class="font-bold">Workshop materials</span> that impress clients</p>
+            <p class="inline-flex flex-wrap gap-2 font-medium text-black text-[22px] leading-[26px] sm:text-[28px] sm:leading-[26px]"><img class="w-7 h-7" src="/assets/home/greenCheck.svg" /> <span class="font-bold">Lead magnets that convert</span> visitors to subscribers</p>
+            <p class="inline-flex flex-wrap gap-2 font-medium text-black text-[22px] leading-[26px] sm:text-[28px] sm:leading-[26px]"><img class="w-7 h-7" src="/assets/home/greenCheck.svg" /><span class="font-bold">E-books that establish</span> your authority</p>
+            <p class="inline-flex flex-wrap gap-2 font-medium text-black text-[22px] leading-[26px] sm:text-[28px] sm:leading-[26px]"><img class="w-7 h-7" src="/assets/home/greenCheck.svg" /><span class="font-bold">Courses that generate</span> passive income</p>
+            <p class="inline-flex flex-wrap gap-2 font-medium text-black text-[22px] leading-[26px] sm:text-[28px] sm:leading-[26px]"><img class="w-7 h-7" src="/assets/home/greenCheck.svg" /><span class="font-bold">Audiobooks that reach </span> busy learners</p>
+            <p class="inline-flex flex-wrap gap-2 font-medium text-black text-[22px] leading-[26px] sm:text-[28px] sm:leading-[26px]"><img class="w-7 h-7" src="/assets/home/greenCheck.svg" /><span class="font-bold">Workshop materials</span> that impress clients</p>
             <p class="flex gap-2 font-bold text-black text-[22px] leading-[26px] sm:text-[28px] sm:leading-[26px]"><img class="w-7 h-7" src="/assets/home/greenCheck.svg" />And much more…</p>
           </div>
         </div>
@@ -777,7 +796,7 @@ export default function Home() {
           <div class="max-w-[900px] mx-auto my-[-20px] sm:my-[-150px] flex items-center gap-0 sm:gap-5">
             <div class="p-4 md:w-1/2 w-full hidden lg:block">
               <div class="h-full p-8">
-                <img alt="content" className="sm:w-auto sm-h-auto ml-auto " src="/assets/home/arrow-l.png" />
+                <img alt="content" className="sm:w-auto sm-h-auto ml-auto mb-[-100px] " src="/assets/home/arrow-l.png" />
               </div>
             </div>
             <div class="p-2 sm:p-4 md:w-1/2 w-full">
@@ -798,7 +817,7 @@ export default function Home() {
             <div class="p-2 sm:p-4 md:w-1/2 w-full">
               <div class="p-8 rounded rounded-[25px] border border-[1px] border-[#9b0ff1]">
                 <h3 className="font-bold text-black text-[30px] leading-[39px] mb-3"><span class="text-[#9b0ff1]">Professional Presentation</span>, Without Design Skills</h3>
-                 <div class="space-y-5 mr-[0px] sm:mr-[-50px]">
+                <div class="space-y-5 mr-[0px] sm:mr-[-50px]">
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Clean, professionally styled PDFs and documents </p>
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Perfectly formatted course chapters</p>
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Consistent branding </p>
