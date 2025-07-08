@@ -774,13 +774,13 @@ export default function Home() {
       <section className="py-10">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 flex flex-row flex-wrap gap-10 ">
           <h2 className="max-w-[700px] mx-auto text-center w-full mb-0 font-bold font-bold text-black text-[40px] leading-[50px] sm:text-[50px] sm:leading-[65px]">What Makes <span class="text-[#9b0ff1]">Mini Lessons Academy </span> Different</h2>
-          <div class="max-w-[900px] mx-auto flex items-center gap-5">
+          <div class="max-w-[975px] mx-auto flex items-center gap-5">
             <div class="p-2 sm:p-4 md:w-1/2 w-full">
-              <div class="h-full p-8 rounded rounded-[25px] border border-[1px] border-[#9b0ff1]">
+              <div class="h-full p-5 rounded rounded-[25px] border border-[1px] border-[#9b0ff1]">
                 <h3 className="font-bold text-black text-[30px] leading-[39px] mb-3"><span class="text-[#9b0ff1]">Your Thinking Partner</span>, Not Just a Robot</h3>
                 <p className="font-medium text-black text-[18px] leading-[23px] mb-3">Most AI tools produce generic content.</p>
                 <p className="font-medium text-black text-[18px] leading-[23px] mb-3">Mini Lessons Creates:</p>
-                <div class="space-y-5 mr-[0px] sm:mr-[-50px]">
+                <div class="space-y-5 ">
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Content that builds logically, with each section supporting the next</p>
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> No meaningless fluff </p>
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Content that reads like your best teaching moments</p>
@@ -793,18 +793,18 @@ export default function Home() {
               </div>
             </div>
           </div >
-          <div class="max-w-[900px] mx-auto my-[-20px] sm:my-[-150px] flex items-center gap-0 sm:gap-5">
+          <div class="max-w-[975px] mx-auto my-[-20px] sm:my-[-150px] flex items-center gap-0 sm:gap-5">
             <div class="p-4 md:w-1/2 w-full hidden lg:block">
               <div class="h-full p-8">
                 <img alt="content" className="sm:w-auto sm-h-auto ml-auto mb-[-100px] " src="/assets/home/arrow-l.png" />
               </div>
             </div>
             <div class="p-2 sm:p-4 md:w-1/2 w-full">
-              <div class="h-full p-8 rounded rounded-[25px] border border-[1px] border-[#9b0ff1]">
+              <div class="h-full p-5 rounded rounded-[25px] border border-[1px] border-[#9b0ff1]">
                 <h3 className="font-bold text-black text-[30px] leading-[39px] mb-3"><span class="text-[#9b0ff1]">Full Control From Vision  </span>, To Execution</h3>
                 <p className="font-medium text-black text-[18px] leading-[23px] mb-3">With our unique Summary Builder:</p>
                 <p className="font-medium text-black text-[18px] leading-[23px] mb-3">Mini Lessons Creates:</p>
-                <div class="space-y-5 mr-[0px] sm:mr-[-50px]">
+                <div class="space-y-5">
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> See exactly what will be in your course before it's generated</p>
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Edit the summary to guide the AI toward your teaching approach </p>
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> No surprises or extensive rewriting after generation</p>
@@ -813,11 +813,11 @@ export default function Home() {
             </div>
 
           </div >
-          <div class="max-w-[900px] mx-auto flex items-end gap-5">
+          <div class="max-w-[975px] mx-auto flex items-end gap-5">
             <div class="p-2 sm:p-4 md:w-1/2 w-full">
-              <div class="p-8 rounded rounded-[25px] border border-[1px] border-[#9b0ff1]">
+              <div class="p-5 rounded rounded-[25px] border border-[1px] border-[#9b0ff1]">
                 <h3 className="font-bold text-black text-[30px] leading-[39px] mb-3"><span class="text-[#9b0ff1]">Professional Presentation</span>, Without Design Skills</h3>
-                <div class="space-y-5 mr-[0px] sm:mr-[-50px]">
+                <div class="space-y-5 ">
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Clean, professionally styled PDFs and documents </p>
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Perfectly formatted course chapters</p>
                   <p class="font-medium text-black text-[20px] leading-[26px]"><span class="font-bold text-[2rem]">→</span> Consistent branding </p>
